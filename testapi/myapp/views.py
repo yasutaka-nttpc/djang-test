@@ -7,6 +7,9 @@ from rest_framework import viewsets, filters
 from .models import Pop3, Imap, Smtpauth, Submission
 from .serializer import Pop3Serializer, ImapSerializer, SmtpauthSerializer, SubmissionSerializer
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 
 class Pop3ViewSet(viewsets.ModelViewSet):
     queryset = Pop3.objects.all()
@@ -27,3 +30,7 @@ class SubmissionViewSet(viewsets.ModelViewSet):
     queryset = Submission.objects.all()
     serializer_class = SubmissionSerializer
 
+
+class TaskGet(APIView):
+  def get(self, request, format=None):
+    return Response("hello")

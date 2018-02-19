@@ -1,8 +1,7 @@
 # coding: utf-8
 
 from rest_framework import routers
-from .views import Pop3ViewSet, ImapViewSet, SmtpauthViewSet, SubmissionViewPort
-
+from .views import Pop3ViewSet, ImapViewSet, SmtpauthViewSet, SubmissionViewSet
 
 router = routers.DefaultRouter()
 router.register(r'pop3', Pop3ViewSet)
