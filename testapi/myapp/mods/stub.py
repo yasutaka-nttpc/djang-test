@@ -1,6 +1,6 @@
 class Stub:
   def ret_data(self):
-    return 'test module'
+    return 'this is test stub'
 
   def get_pop3(self):
     return '0.0.0.0'

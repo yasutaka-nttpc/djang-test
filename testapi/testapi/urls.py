@@ -23,5 +23,5 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(myapp_router.urls)),
-    url(r'api/get',views.TaskGet.as_view(),name='task-get')
+    path('api/test', views.TaskGet.as_view())
 ]

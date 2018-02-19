@@ -10,6 +10,8 @@ from .serializer import Pop3Serializer, ImapSerializer, SmtpauthSerializer, Subm
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+from .mods.stub import Stub
+
 
 class Pop3ViewSet(viewsets.ModelViewSet):
     queryset = Pop3.objects.all()
@@ -33,4 +35,7 @@ class SubmissionViewSet(viewsets.ModelViewSet):
 
 class TaskGet(APIView):
   def get(self, request, format=None):
-    return Response("hello")
+    a = Stub()
+    return Response(a.ret_data())
+
+

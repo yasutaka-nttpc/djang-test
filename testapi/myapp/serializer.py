@@ -1,15 +1,7 @@
 # coding: utf-8
 
 from rest_framework import serializers
-
 from .models import Pop3, Imap, Smtpauth, Submission
-
-import os, sys
-#sys.path.append('/home/yasutaka/workspace/api_test/testapi/mods')
-sys.path.append(os.getcwd())
-import test
-from test import Stub
-#from test import Stub
 
 
 class Pop3Serializer(serializers.ModelSerializer):
