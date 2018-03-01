@@ -11,7 +11,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from .mods.stub import Stub
-
+from django.http import HttpResponse
 
 class Pop3ViewSet(viewsets.ModelViewSet):
     queryset = Pop3.objects.all()
@@ -36,6 +36,9 @@ class SubmissionViewSet(viewsets.ModelViewSet):
 class TaskGet(APIView):
   def get(self, request, format=None):
     a = Stub()
-    return Response(a.ret_data())
+    #return Response(a.ret_data())
 
+def index(request):
+    a = Stub()    
+    return HttpResponse(a.ret_data())
 
